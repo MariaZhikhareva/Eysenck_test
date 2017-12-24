@@ -19,13 +19,16 @@ namespace Eysenck
         public void Execute(object parameter)
         {
             var par = parameter as MainPageViewModel;
-            if (par.currentQuestionIndex < par.questions.Count())
+            if (par != null)
             {
-                par.answers.Add(false);
-                par.currentQuestionIndex++;
                 if (par.currentQuestionIndex < par.questions.Count())
                 {
-                    par.CurrentQuestion = par.questions[par.currentQuestionIndex];
+                    par.answers.Add(false);
+                    par.currentQuestionIndex++;
+                    if (par.currentQuestionIndex < par.questions.Count())
+                    {
+                        par.CurrentQuestion = par.questions[par.currentQuestionIndex];
+                    }
                 }
             }
         }

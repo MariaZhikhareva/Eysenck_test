@@ -105,29 +105,36 @@ namespace Eysenck
         public void GetType()
         {
             //REVIEW: А если эти настройки - пустые или null?
-            if (ExtrIntrCount > 12 && NeuroCount > 11)
+            try
             {
-                typeResult = Eysenck.Properties.Settings.Default.Choleric;
+                if (ExtrIntrCount > 12 && NeuroCount > 11)
+                {
+                    typeResult = Eysenck.Properties.Settings.Default.Choleric;
+                }
+                if (ExtrIntrCount > 12 && NeuroCount <= 11)
+                {
+                    typeResult = Eysenck.Properties.Settings.Default.Sanguine;
+                }
+                if (ExtrIntrCount <= 12 && NeuroCount > 11)
+                {
+                    typeResult = Eysenck.Properties.Settings.Default.Melancholic;
+                }
+                if (ExtrIntrCount <= 12 && NeuroCount <= 11)
+                {
+                    typeResult = Eysenck.Properties.Settings.Default.Phlegmatic;
+                }
+                if (LieCount >= 4)
+                {
+                    lieResult = Eysenck.Properties.Settings.Default.Lie;
+                }
+                else
+                {
+                    lieResult = Eysenck.Properties.Settings.Default.NormLie;
+                }
             }
-            if (ExtrIntrCount > 12 && NeuroCount <= 11)
+            catch
             {
-                typeResult = Eysenck.Properties.Settings.Default.Sanguine;
-            }
-            if (ExtrIntrCount <= 12 && NeuroCount > 11)
-            {
-                typeResult = Eysenck.Properties.Settings.Default.Melancholic;
-            }
-            if (ExtrIntrCount <= 12 && NeuroCount <= 11)
-            {
-                typeResult = Eysenck.Properties.Settings.Default.Phlegmatic;
-            }
-            if (LieCount >= 4)
-            {
-                lieResult = Eysenck.Properties.Settings.Default.Lie;
-            }
-            else
-            {
-                lieResult = Eysenck.Properties.Settings.Default.NormLie;
+                MessageBox.Show("Проверьте настройки");
             }
             try
             {

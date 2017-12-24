@@ -20,13 +20,16 @@ namespace Eysenck
         {
             var par = parameter as MainPageViewModel;
             //REVIEW: а если par==null?
-            if (par.currentQuestionIndex < par.questions.Count())
+            if (par != null)
             {
-                par.answers.Add(true);
-                par.currentQuestionIndex++;
                 if (par.currentQuestionIndex < par.questions.Count())
                 {
-                    par.CurrentQuestion = par.questions[par.currentQuestionIndex];
+                    par.answers.Add(true);
+                    par.currentQuestionIndex++;
+                    if (par.currentQuestionIndex < par.questions.Count())
+                    {
+                        par.CurrentQuestion = par.questions[par.currentQuestionIndex];
+                    }
                 }
             }
         }
