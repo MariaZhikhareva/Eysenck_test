@@ -106,5 +106,17 @@ namespace Eysenck.Properties {
                 this["FileName"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("out.txt")]
+        public string OutFile {
+            get {
+                return ((string)(this["OutFile"]));
+            }
+            set {
+                this["OutFile"] = value;
+            }
+        }
     }
 }

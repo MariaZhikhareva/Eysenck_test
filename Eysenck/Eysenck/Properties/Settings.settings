@@ -23,5 +23,8 @@
     <Setting Name="FileName" Type="System.String" Scope="User">
       <Value Profile="(Default)">Questions.txt</Value>
     </Setting>
+    <Setting Name="OutFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">out.txt</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

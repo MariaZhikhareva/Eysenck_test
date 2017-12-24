@@ -81,8 +81,7 @@ namespace Eysenck
             }
             for (int i = 0; i < NeuroTrueList.Count(); i++)
             {
-                int asd = NeuroTrueList[i] - 1;
-                if (answers[asd])
+                if (answers[NeuroTrueList[i] - 1])
                 {
                     NeuroCount++;
                 }
@@ -130,7 +129,7 @@ namespace Eysenck
             }
             try
             {
-                File.WriteAllText("out.txt", "Ваш темперамент: " + typeResult + " В ответах: " + lieResult);
+                File.WriteAllText(Eysenck.Properties.Settings.Default.OutFile, "Ваш темперамент: " + typeResult + " В ответах: " + lieResult);
                 MessageBox.Show("Ваш темперамент: " + typeResult + "\nВ ответах: " + lieResult + "\nДанные сохранены в файл");
             }
             catch
