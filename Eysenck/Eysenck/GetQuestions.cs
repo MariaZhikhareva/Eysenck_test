@@ -23,6 +23,7 @@ namespace Eysenck
             }
             catch
             {
+                //REVIEW: И всё? Пользователю сообщать об ошибке не надо? В лог не пишем?
                 allText = string.Empty;
             }
             string[] split = allText.Split(new string[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);

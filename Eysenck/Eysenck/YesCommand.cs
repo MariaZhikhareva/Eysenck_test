@@ -19,6 +19,7 @@ namespace Eysenck
         public void Execute(object parameter)
         {
             var par = parameter as MainPageViewModel;
+            //REVIEW: а если par==null?
             if (par.currentQuestionIndex < par.questions.Count())
             {
                 par.answers.Add(true);

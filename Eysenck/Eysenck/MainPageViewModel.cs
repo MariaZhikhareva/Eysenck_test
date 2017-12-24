@@ -65,6 +65,7 @@ namespace Eysenck
 
         public void GetResult()
         {
+            //REVIEW: а если answers ==null или там элементов не хватает до i-го?
             for (int i = 0; i < ExtrIntrTrueList.Count(); i++)
             {
                 if (answers[ExtrIntrTrueList[i] - 1])
@@ -103,6 +104,7 @@ namespace Eysenck
         }
         public void GetType()
         {
+            //REVIEW: А если эти настройки - пустые или null?
             if (ExtrIntrCount > 12 && NeuroCount > 11)
             {
                 typeResult = Eysenck.Properties.Settings.Default.Choleric;
