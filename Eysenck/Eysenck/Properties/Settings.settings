@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Eysenck.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Choleric" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Холерик</Value>
+    </Setting>
+    <Setting Name="Sanguine" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Сангвиник</Value>
+    </Setting>
+    <Setting Name="Phlegmatic" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Флегматик</Value>
+    </Setting>
+    <Setting Name="Melancholic" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Меланхолик</Value>
+    </Setting>
+    <Setting Name="NormLie" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Искренность</Value>
+    </Setting>
+    <Setting Name="Lie" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Неискренность</Value>
+    </Setting>
+    <Setting Name="FileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Questions.txt</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
