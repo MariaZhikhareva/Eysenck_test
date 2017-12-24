@@ -157,11 +157,14 @@ namespace Eysenck
 
             GetQuestions gq = new GetQuestions();
             questions = gq.getQuestions();
-            _currentQuestionIndex = 0;
-            currentQuestion = questions[currentQuestionIndex];
             if (questions.Count() == 0)
             {
                 MessageBox.Show("Вопросы не загрузились. Возможно, отсутствует доступ к файлу.");
+            }
+            else
+            {
+                _currentQuestionIndex = 0;
+                currentQuestion = questions[currentQuestionIndex];
             }
         }
 
